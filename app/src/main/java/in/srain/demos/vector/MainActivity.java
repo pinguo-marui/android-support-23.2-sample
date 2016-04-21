@@ -12,12 +12,12 @@ import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView mStatusTextView;
     private ImageView mAnimDots1;
@@ -35,25 +35,24 @@ public class MainActivity extends AppCompatActivity {
         mStatusTextView = (TextView) findViewById(R.id.status_text_view);
         mAnimDots1 = (ImageView) findViewById(R.id.anim_dots_1);
         mAnimDots2 = (ImageView) findViewById(R.id.anim_dots_2);
+
+        mAnimDots1.setOnClickListener(this);
+        mAnimDots2.setOnClickListener(this);
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+    public void onClick(View v) {
+        if (v == mAnimDots1) {
             Drawable drawable1 = mAnimDots1.getDrawable();
             if (drawable1 instanceof Animatable) {
                 ((Animatable) drawable1).start();
             }
-
+        } else if (v == mAnimDots2) {
             Drawable drawable2 = mAnimDots2.getDrawable();
             if (drawable2 instanceof Animatable) {
                 ((Animatable) drawable2).start();
             }
-
-            return true;
         }
-
-        return super.onTouchEvent(event);
     }
 
     @Override
@@ -111,4 +110,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

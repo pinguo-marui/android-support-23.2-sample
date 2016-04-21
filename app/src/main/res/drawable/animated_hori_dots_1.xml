@@ -3,15 +3,15 @@
                  android:drawable="@drawable/hori_dots">
     <target
         android:name="rotateDown1"
-        android:animation="@animator/rotate_1"/>
+        android:animation="@animator/rotate_1_forward"/>
     <target
         android:name="rotateDown2"
-        android:animation="@animator/rotate_2_together"/>
+        android:animation="@animator/rotate_2_forward_tog"/>
     <target
         android:name="rotateUp1"
-        android:animation="@animator/rotate_1"/>
+        android:animation="@animator/rotate_1_forward"/>
     <target
         android:name="rotateUp2"
-        android:animation="@animator/rotate_2_together"/>
+        android:animation="@animator/rotate_2_forward_tog"/>
 
 </animated-vector>

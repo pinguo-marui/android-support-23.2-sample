@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:drawable="@drawable/hori_dots">
+    <target
+        android:name="rotateDown2"
+        android:animation="@animator/rotate_2_back_tog"/>
+    <target
+        android:name="rotateDown1"
+        android:animation="@animator/rotate_1_back"/>
+    <target
+        android:name="rotateUp2"
+        android:animation="@animator/rotate_2_back_tog"/>
+    <target
+        android:name="rotateUp1"
+        android:animation="@animator/rotate_1_back"/>
+
+</animated-vector>

@@ -13,19 +13,19 @@
                 tools:context="in.srain.demos.vector.MainActivity"
                 tools:showIn="@layout/activity_main">
 
-    <ImageView
+    <android.support.v7.widget.AppCompatImageView
         android:id="@+id/anim_dots_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/animated_hori_dots_1"/>
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/animated_expandable_menu_tog"/>
 
-    <ImageView
+    <android.support.v7.widget.AppCompatImageView
         android:id="@+id/anim_dots_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:background="#80ffffff"
-        app:srcCompat="@drawable/animated_hori_dots_2"/>
+        app:srcCompat="@drawable/animated_expandable_menu_tog"/>
 
     <TextView
         android:id="@+id/status_text_view"

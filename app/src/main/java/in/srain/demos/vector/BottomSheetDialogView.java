@@ -16,7 +16,7 @@ public class BottomSheetDialogView {
     private static String[] sStringList;
 
     static {
-        sStringList = new String[50];
+        sStringList = new String[2];
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < sStringList.length; i++) {
             stringBuilder.append(i + 1);

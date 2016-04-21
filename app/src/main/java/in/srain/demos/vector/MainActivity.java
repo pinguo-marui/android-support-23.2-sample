@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +20,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private TextView mStatusTextView;
-    private ImageView mCpuAniImageView;
+    private ImageView mAnimDots1;
+    private ImageView mAnimDots2;
     private int mDayNightMode = AppCompatDelegate.MODE_NIGHT_AUTO;
 
     @Override
@@ -31,17 +33,33 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mStatusTextView = (TextView) findViewById(R.id.status_text_view);
-        mCpuAniImageView = (ImageView) findViewById(R.id.vector_drawable_cpu_ani);
+        mAnimDots1 = (ImageView) findViewById(R.id.anim_dots_1);
+        mAnimDots2 = (ImageView) findViewById(R.id.anim_dots_2);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            Drawable drawable1 = mAnimDots1.getDrawable();
+            if (drawable1 instanceof Animatable) {
+                ((Animatable) drawable1).start();
+            }
+
+            Drawable drawable2 = mAnimDots2.getDrawable();
+            if (drawable2 instanceof Animatable) {
+                ((Animatable) drawable2).start();
+            }
+
+            return true;
+        }
+
+        return super.onTouchEvent(event);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        Drawable drawable = mCpuAniImageView.getDrawable();
-        if (drawable instanceof Animatable) {
-            ((Animatable) drawable).start();
-        }
 
         int uiMode = getResources().getConfiguration().uiMode;
         int dayNightUiMode = uiMode & Configuration.UI_MODE_NIGHT_MASK;

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dots1" translatable="false">M19.8,50c6.4,0 6.4,-10 0,-10S13.4,50 19.8,50L19.8,50z</string>
+    <string name="dots2" translatable="false">M45,50c6.4,0 6.4,-10 0,-10C38.5,40 38.5,50 45,50L45,50z</string>
+    <string name="dots3" translatable="false">M70.2,50c6.4,0 6.4,-10 0,-10C63.7,40 63.7,50 70.2,50L70.2,50z</string>
+</resources>

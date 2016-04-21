@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="24dp"
+        android:height="24dp"
+        android:viewportHeight="90.0"
+        android:viewportWidth="90.0">
+
+    <group android:name="rotateDown1">
+        <path
+            android:name="dot1"
+            android:fillColor="#FF000000"
+            android:pathData="@string/dots1"/>
+    </group>
+
+    <group android:name="rotateDown2">
+        <path
+            android:name="dot1"
+            android:fillColor="#FF000000"
+            android:pathData="@string/dots1"/>
+    </group>
+
+    <path
+        android:name="dot1"
+        android:fillColor="#FF000000"
+        android:pathData="@string/dots1"/>
+
+    <path
+        android:name="dot2"
+        android:fillColor="#FF000000"
+        android:pathData="@string/dots2"/>
+
+    <path
+        android:name="dot3"
+        android:fillColor="#FF000000"
+        android:pathData="@string/dots3"/>
+
+    <group android:name="rotateUp1">
+        <path
+            android:name="dot3"
+            android:fillColor="#FF000000"
+            android:pathData="@string/dots3"/>
+    </group>
+
+    <group android:name="rotateUp2">
+        <path
+            android:name="dot3"
+            android:fillColor="#FF000000"
+            android:pathData="@string/dots3"/>
+    </group>
+
+</vector>

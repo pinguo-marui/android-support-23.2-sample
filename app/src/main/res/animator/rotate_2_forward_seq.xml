@@ -10,12 +10,12 @@
             android:valueType="floatType"/>
         <objectAnimator
             android:propertyName="pivotX"
-            android:valueFrom="45"
-            android:valueTo="45"/>
+            android:valueFrom="24"
+            android:valueTo="24"/>
         <objectAnimator
             android:propertyName="pivotY"
-            android:valueFrom="45"
-            android:valueTo="45"/>
+            android:valueFrom="24"
+            android:valueTo="24"/>
     </set>
 
     <set>
@@ -28,12 +28,12 @@
         <objectAnimator
             android:propertyName="pivotX"
             android:repeatMode="reverse"
-            android:valueFrom="45"
-            android:valueTo="45"/>
+            android:valueFrom="24"
+            android:valueTo="24"/>
         <objectAnimator
             android:propertyName="pivotY"
             android:repeatMode="reverse"
-            android:valueFrom="45"
-            android:valueTo="45"/>
+            android:valueFrom="24"
+            android:valueTo="24"/>
     </set>
 </set>
